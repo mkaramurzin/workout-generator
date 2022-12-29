@@ -1,0 +1,28 @@
+.body {
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 10px 0px rgba(0,0,0,0.1);
+    padding: 30px;
+    background-color: white;
+}
+
+html {
+    background-color: rgb(243, 243, 243);
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 40pt;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    html {
+        font-size: 15pt;
+    }
+}
