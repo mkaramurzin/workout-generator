@@ -2,5 +2,23 @@
 {% load static %}
 
 {% block body %}
-    <h4>Hello World</h4>
+    <h6>Please provide some information so I can tailor a workout plan for you</h6>
+    <form method="POST">
+        <label>*Where will you be exercising?</label>
+        <select name="location" class="input-field">
+            <option>at the gym</option>
+            <option>at home</option>
+        </select>
+        <label>How many times a week will you be exercising?</label>
+        <input type="number" name="frequency" class="input-field">
+        <label>*How many pounds do you weigh?</label>
+        <input type="number" name="weight" class="input-field">
+        <label>*What is your goal?</label>
+        <input type="text" name="goal" class="input-field">
+        <label>Is there anything extra I should know?</label>
+        <input type="text" name="extra" class="input-field">
+
+        <button type="submit" id="generate" class="btn btn-primary">Generate Workout</button>
+        <button id="loading" class="btn btn-secondary" hidden>Loading...</button>
+    </form>
 {% endblock %}
