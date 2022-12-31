@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3c73fe85-dea9-491a-aa05-ab295e78a773/AppServices/subscriptions/3c73fe85-dea9-491a-aa05-ab295e78a773/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/virtual-trainer",
+    "appService.deploySubpath": "."
+}

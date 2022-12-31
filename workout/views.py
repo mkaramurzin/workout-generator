@@ -12,7 +12,7 @@ def index(request):
         prompt = "Imagine you are a personal fitness trainer. You are knowledgable and descriptive.\n\n"
         prompt += f"Client: I weigh {request.POST['weight']}" 
         if request.POST['location']:
-            prompt += f"pounds and I will be exercising {request.POST['location']} {request.POST['frequency']} times a week."
+            prompt += f" pounds and I will be exercising {request.POST['location']} {request.POST['frequency']} times a week."
         prompt += f"\nClient: My goal is {request.POST['goal']}\n"
         if request.POST['extra'] != '':
             prompt += f"Client: Some important additional information is that {request.POST['extra']}\n"
@@ -21,7 +21,7 @@ def index(request):
 
         print(prompt)
 
-        openai.api_key = "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"
+        openai.api_key = "SECRET_KEY"
         response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt,
