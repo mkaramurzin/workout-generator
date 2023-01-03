@@ -2,6 +2,10 @@
 {% load static %}
 
 {% block body %}
-    <pre>{{ plan }}</pre>
-    <button>Email this to me</button>
+    <pre id="plan">{{ plan }}</pre>
+    <button id="email" class="btn btn-primary">Email this to me</button>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'workout/email.js' %}"></script>
 {% endblock %}

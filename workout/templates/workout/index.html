@@ -9,16 +9,22 @@
             <option>at the gym</option>
             <option>at home</option>
         </select>
-        <label>How many times a week will you be exercising?</label>
+        <label>*How many times a week will you be exercising?</label>
         <input type="number" name="frequency" class="input-field">
         <label>*How many pounds do you weigh?</label>
         <input type="number" name="weight" class="input-field">
-        <label>*What is your goal?</label>
+        <label>*What is your fitness goal?</label>
         <input type="text" name="goal" class="input-field">
         <label>Is there anything extra I should know? (e.g. injuries)</label>
-        <input type="text" name="extra" class="input-field">
+        <input type="text" name="extra" class="input-field" value="No">
 
         <button type="submit" id="generate" class="btn btn-primary">Generate Workout</button>
-        <button id="loading" class="btn btn-secondary" hidden>Loading...</button>
+        <div id="spinner" class="spinner-border" role="status" style="display: none;">
+            <span class="sr-only">Loading...</span>
+        </div>
     </form>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'workout/index.js' %}"></script>
 {% endblock %}
